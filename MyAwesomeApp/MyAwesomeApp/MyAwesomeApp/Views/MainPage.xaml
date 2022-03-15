@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyAwesomeApp.MainPage"
+             BindingContext="{Binding MainPageViewModel, Source={x:StaticResource ViewModelLocator}}"
+             Title="My Awesome App"
+             Visual="Material"
+             Padding="16">
+
+    <StackLayout Spacing="16">
+        <Entry Text="{Binding FirstName}"
+               Placeholder="First Name" />
+        
+        <Entry Text="{Binding LastName}"
+               Placeholder="Last Name" />
+        
+        <Label Text="{Binding FullName}"
+               FontSize="Medium"
+               HorizontalTextAlignment="Center" />
+        
+        <Button Text="Greet User"
+                Command="{Binding GreetUserCommand}" />
+    </StackLayout>
+
+</ContentPage>
